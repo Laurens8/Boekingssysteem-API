@@ -11,8 +11,8 @@ using System.Data;
 
 namespace Boekingssysteem_API.Controllers
 {
-    [Route("api/[controller]")]
     [ApiController]
+    [Route("api/[controller]")]   
     public class PersoonController : ControllerBase
     {
         private readonly IPersoonRepository _persoonRepository;
@@ -24,7 +24,7 @@ namespace Boekingssysteem_API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet]
+        [HttpGet(Name = "Persoon")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Persoon>))]
         public IActionResult GetPersoon()
         {
@@ -43,7 +43,7 @@ namespace Boekingssysteem_API.Controllers
             return BadRequest();
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         [ProducesResponseType(200, Type = typeof(Persoon))]
         [ProducesResponseType(400)]
         public IActionResult GetPersoon(string id) 
