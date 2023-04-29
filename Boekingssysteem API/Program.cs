@@ -4,6 +4,7 @@ using Boekingssysteem_API.Controllers;
 using Boekingssysteem_API.Interfaces;
 using Boekingssysteem_API.Repository;
 using Microsoft.EntityFrameworkCore;
+using System.Net;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -29,7 +30,10 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseHsts();
 }
+
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
