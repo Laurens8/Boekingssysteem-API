@@ -20,10 +20,10 @@ namespace Boekingssysteem.Data
         public DbSet<PersoonFunctie> PersoonFuncties { get; set; }
         public DbSet<Functie> Functies { get; set; }
 
-
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("Boekingssysteem");
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.HasDefaultSchema("TM_Boekingssysteem");
 
             //Tabellen aanmaken
             modelBuilder.Entity<Persoon>().ToTable("Persoon");

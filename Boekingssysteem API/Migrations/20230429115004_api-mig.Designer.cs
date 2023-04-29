@@ -4,6 +4,7 @@ using Boekingssysteem.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,13 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Boekingssysteem_API.Migrations
 {
     [DbContext(typeof(BoekingssysteemContext))]
-    partial class BoekingssysteemContextModelSnapshot : ModelSnapshot
+    [Migration("20230429115004_api-mig")]
+    partial class apimig
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasDefaultSchema("TM_Boekingssysteem")
                 .HasAnnotation("ProductVersion", "7.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
@@ -42,11 +44,15 @@ namespace Boekingssysteem_API.Migrations
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
 
+                    b.Property<string>("PersoonPersoneelnummer")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(8)");
+
                     b.HasKey("AfwezigheidID");
 
-                    b.HasIndex("Personeelnummer");
+                    b.HasIndex("PersoonPersoneelnummer");
 
-                    b.ToTable("Afwezigheid", "TM_Boekingssysteem");
+                    b.ToTable("Afwezigheden");
                 });
 
             modelBuilder.Entity("Boekingssysteem.Models.Functie", b =>
@@ -63,7 +69,7 @@ namespace Boekingssysteem_API.Migrations
 
                     b.HasKey("FunctieID");
 
-                    b.ToTable("Functie", "TM_Boekingssysteem");
+                    b.ToTable("Functies");
                 });
 
             modelBuilder.Entity("Boekingssysteem.Models.Persoon", b =>
@@ -88,45 +94,63 @@ namespace Boekingssysteem_API.Migrations
 
                     b.HasKey("Personeelnummer");
 
-                    b.ToTable("Persoon", "TM_Boekingssysteem");
+                    b.ToTable("Personen");
                 });
 
             modelBuilder.Entity("Boekingssysteem.Models.PersoonFunctie", b =>
                 {
+                    b.Property<int>("PersoonFunctieID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersoonFunctieID"));
+
                     b.Property<int>("FunctieID")
                         .HasColumnType("int");
 
                     b.Property<string>("Personeelnummer")
+                        .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
 
-                    b.Property<int>("PersoonFunctieID")
-                        .HasColumnType("int");
+                    b.Property<string>("PersoonPersoneelnummer")
+                        .HasColumnType("nvarchar(8)");
 
-                    b.HasKey("FunctieID", "Personeelnummer");
+                    b.HasKey("PersoonFunctieID");
 
-                    b.HasIndex("Personeelnummer");
+                    b.HasIndex("FunctieID");
 
-                    b.ToTable("PersoonFunctie", "TM_Boekingssysteem");
+                    b.HasIndex("PersoonPersoneelnummer");
+
+                    b.ToTable("PersoonFuncties");
                 });
 
             modelBuilder.Entity("Boekingssysteem.Models.PersoonRichting", b =>
                 {
-                    b.Property<int>("RichtingID")
+                    b.Property<int>("PersoonRichtingID")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PersoonRichtingID"));
+
                     b.Property<string>("Personeelnummer")
+                        .IsRequired()
                         .HasMaxLength(8)
                         .HasColumnType("nvarchar(8)");
 
-                    b.Property<int>("PersoonRichtingID")
+                    b.Property<string>("PersoonPersoneelnummer")
+                        .HasColumnType("nvarchar(8)");
+
+                    b.Property<int>("RichtingID")
                         .HasColumnType("int");
 
-                    b.HasKey("RichtingID", "Personeelnummer");
+                    b.HasKey("PersoonRichtingID");
 
-                    b.HasIndex("Personeelnummer");
+                    b.HasIndex("PersoonPersoneelnummer");
 
-                    b.ToTable("PersoonRichting", "TM_Boekingssysteem");
+                    b.HasIndex("RichtingID");
+
+                    b.ToTable("PersoonRichtingen");
                 });
 
             modelBuilder.Entity("Boekingssysteem.Models.Richting", b =>
@@ -143,14 +167,14 @@ namespace Boekingssysteem_API.Migrations
 
                     b.HasKey("RichtingID");
 
-                    b.ToTable("Richting", "TM_Boekingssysteem");
+                    b.ToTable("Richtingen");
                 });
 
             modelBuilder.Entity("Boekingssysteem.Models.Afwezigheid", b =>
                 {
                     b.HasOne("Boekingssysteem.Models.Persoon", "Persoon")
                         .WithMany("Afwezigheden")
-                        .HasForeignKey("Personeelnummer")
+                        .HasForeignKey("PersoonPersoneelnummer")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -167,9 +191,7 @@ namespace Boekingssysteem_API.Migrations
 
                     b.HasOne("Boekingssysteem.Models.Persoon", "Persoon")
                         .WithMany("PersoonFuncties")
-                        .HasForeignKey("Personeelnummer")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PersoonPersoneelnummer");
 
                     b.Navigation("Functie");
 
@@ -180,9 +202,7 @@ namespace Boekingssysteem_API.Migrations
                 {
                     b.HasOne("Boekingssysteem.Models.Persoon", "Persoon")
                         .WithMany("PersoonRichtingen")
-                        .HasForeignKey("Personeelnummer")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("PersoonPersoneelnummer");
 
                     b.HasOne("Boekingssysteem.Models.Richting", "Richting")
                         .WithMany("PersoonRichtingen")

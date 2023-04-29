@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\laure\\source\\repos\\Boekingssysteem API\\Boekingssysteem API\\Boekingssysteem API.csproj": {}
+    "C:\\Users\\laure\\OneDrive\\Desktop\\borkingAPI\\Boekingssysteem-API\\Boekingssysteem API\\Boekingssysteem API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\laure\\source\\repos\\Boekingssysteem API\\Boekingssysteem API\\Boekingssysteem API.csproj": {
+    "C:\\Users\\laure\\OneDrive\\Desktop\\borkingAPI\\Boekingssysteem-API\\Boekingssysteem API\\Boekingssysteem API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\laure\\source\\repos\\Boekingssysteem API\\Boekingssysteem API\\Boekingssysteem API.csproj",
+        "projectUniqueName": "C:\\Users\\laure\\OneDrive\\Desktop\\borkingAPI\\Boekingssysteem-API\\Boekingssysteem API\\Boekingssysteem API.csproj",
         "projectName": "Boekingssysteem API",
-        "projectPath": "C:\\Users\\laure\\source\\repos\\Boekingssysteem API\\Boekingssysteem API\\Boekingssysteem API.csproj",
+        "projectPath": "C:\\Users\\laure\\OneDrive\\Desktop\\borkingAPI\\Boekingssysteem-API\\Boekingssysteem API\\Boekingssysteem API.csproj",
         "packagesPath": "C:\\Users\\laure\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\laure\\source\\repos\\Boekingssysteem API\\Boekingssysteem API\\obj\\",
+        "outputPath": "C:\\Users\\laure\\OneDrive\\Desktop\\borkingAPI\\Boekingssysteem-API\\Boekingssysteem API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\laure\\AppData\\Roaming\\NuGet\\NuGet.Config",
