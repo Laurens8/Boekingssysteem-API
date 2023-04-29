@@ -3,6 +3,7 @@ using Boekingssysteem_API;
 using Boekingssysteem_API.Controllers;
 using Boekingssysteem_API.Interfaces;
 using Boekingssysteem_API.Repository;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 
@@ -20,6 +21,10 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoekingssysteemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BoekingssysteemDB"));
+});
+builder.Services.AddMvc(options =>
+{
+    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
 });
 
 var app = builder.Build();

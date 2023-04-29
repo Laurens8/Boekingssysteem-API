@@ -6,15 +6,11 @@ namespace Boekingssysteem.Models
     public class Persoon
     {
         [Key]
-        [Required(ErrorMessage = "Personeelnummer moet ingevuld zijn!")]
         [MinLength(8)]
         [MaxLength(8)]
-        public string Personeelnummer { get; set; }
-        [Required(ErrorMessage = "Naam moet ingevuld zijn!")]
-        public string Naam { get; set; }
-        [Required(ErrorMessage = "Voornaam moet ingevuld zijn!")]
-        public string Voornaam { get; set; }
-        [Required(ErrorMessage = "Admin moet ingevuld zijn!")]
+        public string Personeelnummer { get; set; }      
+        public string Naam { get; set; }      
+        public string Voornaam { get; set; }        
         public bool Admin { get; set; }
         public bool? Aanwezig { get; set; }
 

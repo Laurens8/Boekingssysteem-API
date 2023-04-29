@@ -24,9 +24,10 @@ namespace Boekingssysteem_API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("Personen")]
+        [IgnoreAntiforgeryToken]
+        [HttpGet("personen")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Persoon>))]
-        public IActionResult GetPersoon()
+        public IActionResult GetPersonen()
         {
             try
             {
@@ -37,12 +38,12 @@ namespace Boekingssysteem_API.Controllers
             }
             catch (Exception e)
             {
-
                 Foutenlogboek.FoutLoggen(e);
-            }
-            return BadRequest();
+                return BadRequest();
+            }            
         }
 
+        [IgnoreAntiforgeryToken]
         [HttpGet("get{id}")]
         [ProducesResponseType(200, Type = typeof(Persoon))]
         [ProducesResponseType(400)]
@@ -62,13 +63,13 @@ namespace Boekingssysteem_API.Controllers
             }
             catch (Exception e)
             {
-
                 Foutenlogboek.FoutLoggen(e);
-            }
-           return BadRequest();
+                return BadRequest();               
+            }           
         }
 
-        [HttpPut("update{id}")]
+        [IgnoreAntiforgeryToken]
+        [HttpPut("put{id}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
@@ -98,10 +99,9 @@ namespace Boekingssysteem_API.Controllers
             }
             catch (Exception e)
             {
-
+                Foutenlogboek.FoutLoggen(e);
                 return BadRequest();
-            }
-            
+            }            
         }
     }
 }
