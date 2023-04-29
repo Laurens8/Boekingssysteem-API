@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>Boekingssysteem_API</RootNamespace>
+    <UserSecretsId>b544bc76-c2e0-4352-b934-f6b84a1061f0</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

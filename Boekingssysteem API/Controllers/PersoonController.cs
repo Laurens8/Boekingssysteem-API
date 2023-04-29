@@ -24,7 +24,7 @@ namespace Boekingssysteem_API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet(Name = "Persoon")]
+        [HttpGet("Personen")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Persoon>))]
         public IActionResult GetPersoon()
         {
@@ -43,7 +43,7 @@ namespace Boekingssysteem_API.Controllers
             return BadRequest();
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("get{id}")]
         [ProducesResponseType(200, Type = typeof(Persoon))]
         [ProducesResponseType(400)]
         public IActionResult GetPersoon(string id) 
@@ -68,7 +68,7 @@ namespace Boekingssysteem_API.Controllers
            return BadRequest();
         }
 
-        [HttpPut("{id}")]
+        [HttpPut("update{id}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
