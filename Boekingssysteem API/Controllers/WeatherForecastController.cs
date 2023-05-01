@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Boekingssysteem_API.Controllers
 {
-    
+    [Route("api/[controller]")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]

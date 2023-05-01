@@ -218,3 +218,22 @@ The ConnectionString property has not been initialized.
    at Boekingssysteem_API.Controllers.PersoonController.GetPersoon() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 33
 --------------------------------------------------------------------------------
 
+21:34:40 
+InvalidOperationException
+The ConnectionString property has not been initialized.
+   at Microsoft.Data.SqlClient.SqlConnection.PermissionDemand()
+   at Microsoft.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   at Microsoft.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry, SqlConnectionOverrides overrides)
+   at Microsoft.Data.SqlClient.SqlConnection.Open(SqlConnectionOverrides overrides)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.OpenInternal(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalConnection.Open(Boolean errorsExpected)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReader(RelationalCommandParameterObject parameterObject)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.InitializeReader(Enumerator enumerator)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Boekingssysteem_API.Repository.PersoonRepository.Getpersoonen() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 23
+   at Boekingssysteem_API.Controllers.PersoonController.GetPersonen() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 33
+--------------------------------------------------------------------------------
+

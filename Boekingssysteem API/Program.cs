@@ -20,7 +20,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BoekingssysteemContext>(options =>
 {
-    options.UseSqlServer(builder.Configuration.GetConnectionString("BoekingssysteemDB"));
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
 var app = builder.Build();
@@ -31,7 +31,7 @@ if (app.Environment.IsProduction())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    //app.UseHsts();
+    app.UseHsts();
 }
 
 app.UseHttpsRedirection();
