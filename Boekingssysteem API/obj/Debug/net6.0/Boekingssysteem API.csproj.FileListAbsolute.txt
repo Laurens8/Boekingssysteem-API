@@ -103,6 +103,7 @@ C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem A
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\Azure.Identity.dll
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\Humanizer.dll
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\System.Web.Http.dll
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
@@ -182,4 +183,3 @@ C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem A
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\obj\Debug\net6.0\Boekingssysteem API.pdb
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\obj\Debug\net6.0\Boekingssysteem API.genruntimeconfig.cache
 C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\obj\Debug\net6.0\ref\Boekingssysteem API.dll
-C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\bin\Debug\net6.0\System.Web.Http.dll

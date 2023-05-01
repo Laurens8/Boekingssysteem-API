@@ -24,7 +24,6 @@ namespace Boekingssysteem_API.Controllers
             _mapper = mapper;
         }
 
-        [IgnoreAntiforgeryToken]
         [HttpGet("personen")]
         [ProducesResponseType(200, Type = typeof(IEnumerable<Persoon>))]
         public IActionResult GetPersonen()
@@ -43,7 +42,6 @@ namespace Boekingssysteem_API.Controllers
             }            
         }
 
-        [IgnoreAntiforgeryToken]
         [HttpGet("get{id}")]
         [ProducesResponseType(200, Type = typeof(Persoon))]
         [ProducesResponseType(400)]
@@ -68,7 +66,6 @@ namespace Boekingssysteem_API.Controllers
             }           
         }
 
-        [IgnoreAntiforgeryToken]
         [HttpPut("put{id}")]
         [ProducesResponseType(400)]
         [ProducesResponseType(204)]

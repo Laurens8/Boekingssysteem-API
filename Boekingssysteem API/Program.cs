@@ -22,10 +22,6 @@ builder.Services.AddDbContext<BoekingssysteemContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("BoekingssysteemDB"));
 });
-builder.Services.AddMvc(options =>
-{
-    options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
-});
 
 var app = builder.Build();
 
@@ -35,7 +31,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseHsts();
+    //app.UseHsts();
 }
 
 app.UseHttpsRedirection();
