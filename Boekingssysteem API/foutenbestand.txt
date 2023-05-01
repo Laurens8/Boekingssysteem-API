@@ -237,3 +237,105 @@ The ConnectionString property has not been initialized.
    at Boekingssysteem_API.Controllers.PersoonController.GetPersonen() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 33
 --------------------------------------------------------------------------------
 
+01:08:02 
+DbUpdateException
+An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Boekingssysteem_API.Repository.PersoonRepository.Save() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 33
+   at Boekingssysteem_API.Repository.PersoonRepository.UpdatePersoon(Persoon persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 40
+   at Boekingssysteem_API.Controllers.PersoonController.UpdatePersoon(String id, PersoonDto persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 90
+--------------------------------------------------------------------------------
+
+01:08:40 
+DbUpdateException
+An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Boekingssysteem_API.Repository.PersoonRepository.Save() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 33
+   at Boekingssysteem_API.Repository.PersoonRepository.UpdatePersoon(Persoon persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 40
+   at Boekingssysteem_API.Controllers.PersoonController.UpdatePersoon(String id, PersoonDto persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 90
+--------------------------------------------------------------------------------
+
+01:08:59 
+DbUpdateException
+An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Boekingssysteem_API.Repository.PersoonRepository.Save() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 33
+   at Boekingssysteem_API.Repository.PersoonRepository.UpdatePersoon(Persoon persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 40
+   at Boekingssysteem_API.Controllers.PersoonController.UpdatePersoon(String id, PersoonDto persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 90
+--------------------------------------------------------------------------------
+
+01:09:50 
+DbUpdateException
+An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Boekingssysteem_API.Repository.PersoonRepository.Save() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 33
+   at Boekingssysteem_API.Repository.PersoonRepository.UpdatePersoon(Persoon persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 40
+   at Boekingssysteem_API.Controllers.PersoonController.UpdatePersoon(String id, PersoonDto persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 90
+--------------------------------------------------------------------------------
+
+01:14:24 
+DbUpdateException
+An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Boekingssysteem_API.Repository.PersoonRepository.Save() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 33
+   at Boekingssysteem_API.Repository.PersoonRepository.UpdatePersoon(Persoon persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 40
+   at Boekingssysteem_API.Controllers.PersoonController.UpdatePersoon(String id, PersoonDto persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 90
+--------------------------------------------------------------------------------
+
+01:15:21 
+DbUpdateException
+An error occurred while saving the entity changes. See the inner exception for details.
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.Consume(RelationalDataReader reader)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.Execute(IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.Execute(IEnumerable`1 commandBatches, IRelationalConnection connection)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(IList`1 entriesToSave)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(StateManager stateManager, Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChanges(Boolean acceptAllChangesOnSuccess)
+   at Boekingssysteem_API.Repository.PersoonRepository.Save() in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 33
+   at Boekingssysteem_API.Repository.PersoonRepository.UpdatePersoon(Persoon persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Repository\PersoonRepository.cs:line 40
+   at Boekingssysteem_API.Controllers.PersoonController.UpdatePersoon(String id, PersoonDto persoon) in C:\Users\laure\OneDrive\Desktop\borkingAPI\Boekingssysteem-API\Boekingssysteem API\Controllers\PersoonController.cs:line 90
+--------------------------------------------------------------------------------
+
