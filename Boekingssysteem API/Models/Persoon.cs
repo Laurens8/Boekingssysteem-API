@@ -13,6 +13,7 @@ namespace Boekingssysteem.Models
         public string Voornaam { get; set; }        
         public bool Admin { get; set; }
         public bool? Aanwezig { get; set; }
+        public string Wachtwoord { get; set; }
 
         //Navigatieproperties
         public virtual ICollection<Afwezigheid> Afwezigheden { get; set; }

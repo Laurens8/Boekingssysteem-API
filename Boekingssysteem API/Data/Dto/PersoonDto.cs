@@ -8,5 +8,6 @@ namespace Boekingssysteem_API.Data.Dto
         public string Naam { get; set; }  
         public string Voornaam { get; set; }  
         public bool? Aanwezig { get; set; }
+        public string Wachtwoord { get; set; }
     }
 }
